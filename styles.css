@@ -1,0 +1,119 @@
+body {
+cursor: url("./images/drumsticks.svg") 4 4, pointer;
+cursor: -webkit-image-set(url("./images/drumsticks.svg") 2x) 4 4, pointer;
+text-align: center;
+background: rgb(7, 7, 87);
+background: linear-gradient(
+    -90deg,
+    rgba(7, 7, 87, 1) 30%,
+    rgb(72, 27, 179) 100%
+  );
+  height: 100vh;
+caret-color: transparent;
+}
+
+h1 {
+  font-size: 7rem;
+  color: #ffffff;
+  font-family: "Oswald", sans-serif;
+}
+
+
+.Kit {
+color: #ff00dd;
+}
+
+footer {
+  margin-top: 30%;
+  position: relative;
+  display: block;
+  color: #dbedf3;
+  font-family: "Oswald", sans-serif;
+}
+
+.w {
+  background-image: url(./images/tom1.png);
+}
+
+.a {
+  background-image: url(./images/tom2.png);
+}
+
+.s {
+  background-image: url(./images/tom3.png);
+}
+
+.d {
+  background-image: url(./images/tom4.png);
+}
+
+.j {
+  background-image: url(./images/crash.png);
+}
+
+.k {
+  background-image: url(./images/kick.png);
+}
+
+.l {
+  background-image: url(./images/snare.png);
+}
+
+
+.drum {
+  display: inline-block;
+  outline: none;
+  border: 10px solid #8f71e0;
+  font-size: 3rem;
+  font-family: "Oswald", sans-serif;
+  line-height: 8.5rem;
+  font-weight: 700;
+  border-radius: 40px;
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  margin: 20px;
+  background-color: rgb(255, 255, 255);
+}
+
+.drum.active {
+  transform: scale(0.9);
+}
+
+.drum:hover {
+  box-shadow: 0px 0px 20px 10px #201b4e65;
+  border: 10px solid #ff00dd;
+}
+
+/*   Extra small devices (phones, 600px and down) */
+@media (min-width: 350px) and (max-width: 750px) {
+  body {
+    cursor: none;
+    max-height: 780px;
+  }
+
+  h1 {
+    margin-top: 0px;
+    font-size: 4rem; /* Adjust font size based on testing */
+    line-height: 1.1; /* Adjust line height for better readability */
+  }
+
+  footer {
+    position: relative; /* Adjust margin for better positioning */
+    bottom: 44px;
+  }
+
+  .drum-container{
+    margin-top: 0px;
+  }
+  .drum {
+    border: 10px solid #8f71e0;
+    border-radius: 36px;
+    width: 130px;
+    height: 130px;
+    margin: 12px;
+    font-size: 3rem;
+    line-height: 6.5rem;
+  }
+}
