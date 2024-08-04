@@ -8,31 +8,31 @@ caret-color: transparent;
 
 body {
 margin: 0;
-/* background-color: black; */
 background-image: url("./images/texture-dark.jpg");
 caret-color: transparent;
 border: none;
 overflow: hidden;
 }
 
-Canvas {
-position: fixed;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-pointer-events: none;
+
+.svg {
+  width: 160px;
+  position: relative;
+  vertical-align:bottom
 }
 
-
 h1 {
-color: rgb(255, 255, 255);
+  color: #000000;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: rgb(255, 255, 255);
 font-size: 7rem;
 font-family: "Oswald", sans-serif;
 }
 
 span{
-color: rgb(250, 0, 196);
+color: rgb(0, 0, 0);
+-webkit-text-stroke-width: 2px;
+-webkit-text-stroke-color: rgb(255, 255, 255);
 }
 
 footer {
@@ -68,13 +68,14 @@ font-family: "Oswald", sans-serif;
   background-image: url(./images/snare.png);
 }
 
+
 .drum {
 cursor: inherit;
 outline: none;
-border: 6px solid #e0abff;
+border: 6px solid #ffc7ee;
 font-size: 3rem;
 font-family: "Oswald", sans-serif;
-line-height: 8.5rem;
+line-height: 10.5rem;
 font-weight: 700;
 border-radius: 40px;
 width: 180px;
