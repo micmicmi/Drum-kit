@@ -5,6 +5,10 @@ html {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
   margin: 0;
   background-image: url("./images/texture-dark.jpg");
   caret-color: transparent;
@@ -29,6 +33,7 @@ span {
 }
 
 .svg {
+  width: 10rem;
   position: relative;
   vertical-align: bottom;
 }
@@ -75,7 +80,7 @@ footer {
 
 .drum {
   color: #ffffff;
-  text-shadow: rgb(197, 25, 183) -1px 1px 20px;
+  text-shadow: rgb(255, 0, 234) 0px 0px 30px;
   cursor: inherit;
   outline: none;
   border: 6px solid #ffc7ee;
@@ -124,7 +129,6 @@ h1 {
   -webkit-text-stroke-color: rgb(255, 255, 255);
   position: relative;
   right: 1%;
-  margin-top: -80px;
 }
 span {
   color: #000000;
@@ -134,7 +138,7 @@ span {
 .svg {
   width: 80px;
   position: relative;
-  top: 60px;
+  top: 6px;
   vertical-align: bottom;
 }
   
@@ -163,7 +167,7 @@ span {
 }
 
 /* Extra small devices (phones, 600px and down) */
-@media (max-width: 500px) and (min-width:360px){
+@media (max-width: 600px) and (min-width:360px){
   body {
     display: flex;
     flex-direction: column;
@@ -183,7 +187,6 @@ span {
     -webkit-text-stroke-color: rgb(255, 255, 255);
     position: relative;
     right: 1%;
-    margin-top: -60px;
   }
 
   span {
@@ -194,7 +197,7 @@ span {
   .svg {
     width: 80px;
     position: relative;
-    top: 60px;
+    top: 3px;
     vertical-align: bottom;
   }
 
@@ -227,6 +230,7 @@ span {
 
   .l {
     background-image: url("./images/new/bass-drum.jpg");
+    width: 100vw;
     background-size: contain;
   }
   .w {
