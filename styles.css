@@ -86,6 +86,7 @@ footer {
   border: 6px solid #ffc7ee;
   font-size: 4rem;
   font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
   font-weight: 700;
   border-radius: 40px;
   width: 180px;
@@ -122,7 +123,7 @@ body {
 h1 {
   position: relative;
   right: 1%;
-  font-size: 3rem; 
+  font-size: 2rem; 
   line-height: 1.1; 
   color: #000000;
   -webkit-text-stroke-width: 1px;
@@ -144,13 +145,14 @@ span {
   
 .drum-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  text-transform: uppercase;
   gap: 10px;
   margin: 10px;
   justify-items: center;
 }
 
 .drum {
+  background: #fa00c4;
   border: none;
   font-size: 2rem;
   line-height:normal;
@@ -158,8 +160,8 @@ span {
   border-radius: 50px;
   height: 60px;
   display: flex;
-  justify-content: center;  width: 100%;
-  background: #ec09a1;
+  justify-content: center;
+  width: 100%;
 }
 .drum:hover{
   border: none;
@@ -167,7 +169,7 @@ span {
 }
 
 /* Extra small devices (phones, 600px and down) */
-@media (max-width: 600px) and (min-width:360px){
+@media (max-width:550px) and (min-width:360px){
   body {
     display: flex;
     flex-direction: column;
@@ -188,7 +190,6 @@ span {
     position: relative;
     right: 1%;
   }
-
   span {
     color: #000000;
     -webkit-text-stroke-width: 1px;
@@ -205,17 +206,14 @@ span {
     transform: scale(1.05);
   }
 
-  
 .drum-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   align-items: center;
   gap: 20px;
-  justify-content: space-between;
-  align-content: center;
   justify-items: center;
+  width: 100%;
 }
-
 .drum {
   text-shadow: rgb(255, 0, 234) 0px 0px 20px;
   border-radius: 20px;
@@ -225,29 +223,30 @@ span {
   align-items: center;
   align-content: center;
   width: 100%;
+  background-size: contain;
 }
 
+.l {
+background-image: url("./images/new/bass-drum.jpg");
+background-size: 360px;
+grid-column: span 2;
+}
 
-  .l {
-    background-image: url("./images/new/bass-drum.jpg");
-    width: 100vw;
-    background-size: contain;
-  }
-  .w {
-    background-image: url(./images/new/toms.jpg);
-    background-size: 180px;
-  }
-  .d {
-    background-image: url(./images/new/toms2-.webp);
-    background-size: 200px auto;
-  }
+.w {
+background-image: url("./images/new/toms.jpg");
+background-size: 180px;
+}
+.d {
+background-image: url("./images/new/toms2-.webp");
+background-size: 200px auto;
+}
 
-  .j {
-    background-image: url(./images/new/crash.png);
-    background-size: 150px auto;
-  }
-  .k {
-    background-image: url(./images/new/=k.jpg);
-    background-size: 200px auto;
-  }
+.j {
+background-image: url("./images/new/crash.png");
+background-size: 150px auto;
+}
+.k {
+background-image: url("./images/new/=k.jpg");
+background-size: 200px auto;
+}
 }
