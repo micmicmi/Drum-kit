@@ -1,133 +1,249 @@
-
 html {
-cursor: -webkit-image-set(url("./images/drumsticks.svg") 2x) 4 4, default; 
-text-align: center;
-caret-color: transparent;
+  cursor: -webkit-image-set(url("./images/drumsticks.svg") 2x) 4 4, default;
+  text-align: center;
+  caret-color: transparent;
 }
-
 
 body {
-margin: 0;
-background-image: url("./images/texture-dark.jpg");
-caret-color: transparent;
-border: none;
-overflow: hidden;
-}
-
-
-.svg {
-  width: 160px;
-  position: relative;
-  vertical-align:bottom
+  margin: 0;
+  background-image: url("./images/texture-dark.jpg");
+  caret-color: transparent;
+  border: none;
+  overflow: hidden;
 }
 
 h1 {
   color: #000000;
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: rgb(255, 255, 255);
-font-size: 7rem;
-font-family: "Oswald", sans-serif;
+  position: relative;
+  right: 1%;
+  font-size: 7rem;
+  font-family: "Oswald", sans-serif;
 }
 
-span{
-color: rgb(0, 0, 0);
--webkit-text-stroke-width: 2px;
--webkit-text-stroke-color: rgb(255, 255, 255);
+span {
+  color: rgb(0, 0, 0);
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: rgb(255, 255, 255);
+}
+
+.svg {
+  position: relative;
+  vertical-align: bottom;
 }
 
 footer {
-color: #ffffff;
-font-family: "Oswald", sans-serif;
+  color: #ffffff;
+  font-family: "Oswald", sans-serif;
 }
 
 .w {
-  background-image: url(./images/tom1.png);
+  background-image: url(./images/new/toms.jpg);
+  background-size: auto;
 }
 
 .a {
-  background-image: url(./images/tom2.png);
+  background-image: url(./images/new/toms2-.webp);
+  background-size: 200px auto;
 }
 
 .s {
-  background-image: url(./images/tom3.png);
+  background-image: url(./images/new/toms.jpg);
+  background-size: 280px auto;
 }
 
 .d {
-  background-image: url(./images/tom4.png);
+  background-image: url(./images/new/toms2-.webp);
+  background-size: 300px auto;
 }
 
 .j {
-  background-image: url(./images/crash.png);
+  background-image: url(./images/new/crash.png);
+  background-size: 200px auto;
 }
 
 .k {
-  background-image: url(./images/kick.png);
+  background-image: url(./images/new/=k.jpg);
+  background-size: 280px auto;
 }
 
 .l {
-  background-image: url(./images/snare.png);
+  background-image: url(./images/new/bass-drum.jpg);
+  background-size: 220px auto;
 }
 
-
 .drum {
-cursor: inherit;
-outline: none;
-border: 6px solid #ffc7ee;
-font-size: 3rem;
-font-family: "Oswald", sans-serif;
-line-height: 10.5rem;
-font-weight: 700;
-border-radius: 40px;
-width: 180px;
-height: 180px;
-text-align: center;
-margin: 12px;
-background-color: rgb(255, 255, 255);
-display: inline-block;
+  color: #ffffff;
+  text-shadow: rgb(197, 25, 183) -1px 1px 20px;
+  cursor: inherit;
+  outline: none;
+  border: 6px solid #ffc7ee;
+  font-size: 4rem;
+  font-family: "Oswald", sans-serif;
+  font-weight: 700;
+  border-radius: 40px;
+  width: 180px;
+  height: 180px;
+  margin: 12px;
 }
 
 .drum.active {
-transform: scale(0.9);
+  transform: scale(0.9);
 }
 
 .drum:hover {
-box-shadow: 0px 0px 20px 0px #cf0a8de8;
-border: 6px solid #fa00c4;
+  box-shadow: 0px 0px 20px 0px #cf0a8de8;
+  border: 6px solid #fa00c4;
 }
 
 .drum-container {
-margin-top: 0px;
-padding-bottom: 16%;
+  padding-bottom: 16%;
+}
+
+
+/* Media Querirs - extra etra small devices*/
+@media (max-width: 360px){
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: none;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  position: relative;
+  right: 1%;
+  font-size: 3rem; 
+  line-height: 1.1; 
+  color: #000000;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgb(255, 255, 255);
+  position: relative;
+  right: 1%;
+  margin-top: -80px;
+}
+span {
+  color: #000000;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgb(255, 255, 255);
+}
+.svg {
+  width: 80px;
+  position: relative;
+  top: 60px;
+  vertical-align: bottom;
+}
+  
+.drum-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+  margin: 10px;
+  justify-items: center;
+}
+
+.drum {
+  border: none;
+  font-size: 2rem;
+  line-height:normal;
+  text-shadow: rgb(255, 0, 234) 0px 0px 20px;
+  border-radius: 50px;
+  height: 60px;
+  display: flex;
+  justify-content: center;  width: 100%;
+  background: #ec09a1;
+}
+.drum:hover{
+  border: none;
+}
 }
 
 /* Extra small devices (phones, 600px and down) */
-@media (max-width: 450px) and (min-width: 350px) {
-
-body {
-    cursor: none;
-    max-height: 100vh;
-    margin: 0;
-}
-h1 {
-  margin-top: 36px;
-  font-size: 4rem; /* Adjust font size based on testing */
-  line-height: 1.1; /* Adjust line height for better readability */
-}
-footer {
+@media (max-width: 500px) and (min-width:360px){
+  body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-content: end;
-}
+    cursor: none;
+    margin: 0;
+    padding: 20px;
+  }
+
+  h1 {
+    position: relative;
+    right: 1%;
+    font-size: 3rem; /* Adjust font size based on testing */
+    line-height: 1.1; /* Adjust line height for better readability */
+    color: #000000;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(255, 255, 255);
+    position: relative;
+    right: 1%;
+    margin-top: -60px;
+  }
+
+  span {
+    color: #000000;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(255, 255, 255);
+  }
+  .svg {
+    width: 80px;
+    position: relative;
+    top: 60px;
+    vertical-align: bottom;
+  }
+
+  .svg:hover {
+    transform: scale(1.05);
+  }
+
+  
 .drum-container {
-  margin-top: 0px;
-  padding-bottom: 26%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  align-items: center;
+  gap: 20px;
+  justify-content: space-between;
+  align-content: center;
+  justify-items: center;
 }
+
 .drum {
-  border-radius: 36px;
-  width: 130px;
+  text-shadow: rgb(255, 0, 234) 0px 0px 20px;
+  border-radius: 20px;
   height: 130px;
-  margin: 12px;
-  font-size: 3rem;
-  line-height: 7.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 100%;
 }
+
+
+  .l {
+    background-image: url("./images/new/bass-drum.jpg");
+    background-size: contain;
+  }
+  .w {
+    background-image: url(./images/new/toms.jpg);
+    background-size: 180px;
+  }
+  .d {
+    background-image: url(./images/new/toms2-.webp);
+    background-size: 200px auto;
+  }
+
+  .j {
+    background-image: url(./images/new/crash.png);
+    background-size: 150px auto;
+  }
+  .k {
+    background-image: url(./images/new/=k.jpg);
+    background-size: 200px auto;
+  }
 }
