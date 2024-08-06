@@ -1,19 +1,16 @@
 html {
-  cursor: -webkit-image-set(url("./images/drumsticks.svg") 2x) 4 4, default;
+  cursor: url("./images/drumsticks.svg"), auto;
   text-align: center;
   caret-color: transparent;
 }
 
 body {
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-content: center;
-  margin: 0;
+  align-items: center;
+  height: 100vh;
   background-image: url("./images/texture-dark.jpg");
-  caret-color: transparent;
-  border: none;
-  overflow: hidden;
+  margin: 0;
 }
 
 h1 {
@@ -60,7 +57,7 @@ footer {
 
 .d {
   background-image: url(./images/new/toms2-.webp);
-  background-size: 300px auto;
+  background-size: 350px auto;
 }
 
 .j {
@@ -104,81 +101,19 @@ footer {
 }
 
 .drum-container {
-  padding-bottom: 16%;
+  padding-bottom: 15%;
 }
 
-
-/* Media Querirs - extra etra small devices*/
-@media (max-width: 360px){
-
-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  cursor: none;
-  margin: 0;
-  padding: 20px;
-}
-
-h1 {
-  position: relative;
-  right: 1%;
-  font-size: 2rem; 
-  line-height: 1.1; 
-  color: #000000;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: rgb(255, 255, 255);
-  position: relative;
-  right: 1%;
-}
-span {
-  color: #000000;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: rgb(255, 255, 255);
-}
-.svg {
-  width: 80px;
-  position: relative;
-  top: 6px;
-  vertical-align: bottom;
-}
-  
-.drum-container {
-  display: grid;
-  text-transform: uppercase;
-  gap: 10px;
-  margin: 10px;
-  justify-items: center;
-}
-
-.drum {
-  background: #fa00c4;
-  border: none;
-  font-size: 2rem;
-  line-height:normal;
-  text-shadow: rgb(255, 0, 234) 0px 0px 20px;
-  border-radius: 50px;
-  height: 60px;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-.drum:hover{
-  border: none;
-}
-}
-
-/* Extra small devices (phones, 600px and down) */
-@media (max-width:550px) and (min-width:360px){
+/* Media Querirs - extra exstra small devices*/
+@media (max-width: 360px) {
   body {
     display: flex;
     flex-direction: column;
     justify-content: center;
     cursor: none;
     margin: 0;
-    padding: 20px;
+    border: none;
   }
-
   h1 {
     position: relative;
     right: 1%;
@@ -201,52 +136,104 @@ span {
     top: 3px;
     vertical-align: bottom;
   }
-
   .svg:hover {
     transform: scale(1.05);
   }
 
-.drum-container {
+  .drum-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  align-items: center;
-  gap: 20px;
+  grid-template-columns: 1fr; /* align-items: center; */
+  gap: 12px;
   justify-items: center;
-  width: 100%;
-}
-.drum {
-  text-shadow: rgb(255, 0, 234) 0px 0px 20px;
-  border-radius: 20px;
-  height: 130px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  width: 100%;
-  background-size: contain;
+  }
+
+  .drum {
+    background: #ff00aa;
+    border: none;
+    font-size: 2rem;
+    border-radius: 20px;
+    height: 60px;
+    width: 90vw;
+    border-radius: 60px;
+  }
 }
 
-.l {
-background-image: url("./images/new/bass-drum.jpg");
-background-size: 360px;
-grid-column: span 2;
-}
+/* Extra small devices (phones, 600px and down) */
+@media (max-width: 550px) and (min-width: 360px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: none;
+    margin: 0;
+  }
+  h1 {
+    position: relative;
+    right: 1%;
+    font-size: 3rem; /* Adjust font size based on testing */
+    line-height: 1.1; /* Adjust line height for better readability */
+    color: #000000;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(255, 255, 255);
+    position: relative;
+    right: 1%;
+  }
+  span {
+    color: #000000;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(255, 255, 255);
+  }
+  .svg {
+    width: 80px;
+    position: relative;
+    top: 3px;
+    vertical-align: bottom;
+  }
+  .svg:hover {
+    transform: scale(1.05);
+  }
 
-.w {
-background-image: url("./images/new/toms.jpg");
-background-size: 180px;
-}
-.d {
-background-image: url("./images/new/toms2-.webp");
-background-size: 200px auto;
-}
+  .drum-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Adjust the number of columns as needed */
+    /* grid-template-columns: repeat(
+      auto-fill,
+      minmax(150px, 1fr)
+    ); */
+    gap: 10px;
+    width: 90vw; /* padding: 20px; */ /* margin: 0; */
+    justify-content: space-between;
+    justify-items: center;
+  }
 
-.j {
-background-image: url("./images/new/crash.png");
-background-size: 150px auto;
-}
-.k {
-background-image: url("./images/new/=k.jpg");
-background-size: 200px auto;
-}
+  .drum {
+    text-shadow: rgb(255, 0, 234) 0px 0px 20px;
+    border-radius: 20px;
+    height: 130px;
+    width: 100%;
+  }
+
+  .l {
+    background-image: url("./images/new/bass-drum.jpg");
+    background-size: 360px;
+    grid-column: span 2;
+  }
+
+  .w {
+    background-image: url("./images/new/toms.jpg");
+    background-size: 180px;
+  }
+  .d {
+    background-image: url("./images/new/toms2-.webp");
+    background-size: 200px auto;
+  }
+
+  .j {
+    background-image: url("./images/new/crash.png");
+    background-size: 150px auto;
+  }
+  .k {
+    background-image: url("./images/new/=k.jpg");
+    background-size: 200px auto;
+  }
 }
