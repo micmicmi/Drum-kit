@@ -105,7 +105,7 @@ footer {
 }
 
 /* Media Querirs - extra exstra small devices*/
-@media (max-width: 360px) {
+@media (max-width: 363px) {
   body {
     display: flex;
     flex-direction: column;
@@ -159,7 +159,7 @@ footer {
 }
 
 /* Extra small devices (phones, 600px and down) */
-@media (max-width: 550px) and (min-width: 360px) {
+@media (max-width: 550px) and (min-width: 365px) {
   body {
     display: flex;
     flex-direction: column;
@@ -191,6 +191,8 @@ footer {
   }
   .svg:hover {
     transform: scale(1.05);
+    box-shadow: 0px 0px 20px 0px #cf0a8de8;
+    border: 6px solid #fa00c4;
   }
 
   .drum-container {
@@ -218,14 +220,22 @@ footer {
     background-size: 360px;
     grid-column: span 2;
   }
-
+  .a {
+    background-image: url(./images/new/toms2-.webp);
+    background-size: 200px auto;
+  }
+  
+  .s {
+    background-image: url(./images/new/toms.jpg);
+    background-size: 280px auto;
+  }
   .w {
     background-image: url("./images/new/toms.jpg");
     background-size: 180px;
   }
   .d {
     background-image: url("./images/new/toms2-.webp");
-    background-size: 200px auto;
+    background-size: 300px auto;
   }
 
   .j {
