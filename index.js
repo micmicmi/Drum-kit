@@ -117,9 +117,15 @@ drums.forEach((drum) => {
     minimizeDrum(drum.dataset.key);
   });
 });
-
 drums.forEach((drum) => {
   drum.addEventListener("mouseup", () => {
+    playSound(drum.dataset.key);
+    maximizeDrum(drum.dataset.key);
+  });
+});
+
+drums.forEach((drum) => {
+  drum.addEventListener("keydown", () => {
     playSound(drum.dataset.key);
     maximizeDrum(drum.dataset.key);
   });
@@ -129,4 +135,17 @@ document.addEventListener("keydown", (event) => {
   playSoundAndAnimate(event.key);
 });
 
+let minimizedDrum = null;
 
+drums.forEach((drum) => {
+  drum.addEventListener('click', () => {
+    if (minimizedDrum) {
+      maximizeDrum(minimizedDrum);
+    }
+    minimizeDrum(drum.dataset.key);
+    minimizedDrum = drum.dataset.key;
+    setTimeout(() => {
+      maximizeDrum(drum.dataset.key);
+    }, 100); // Adjust timeout as needed
+  });
+});

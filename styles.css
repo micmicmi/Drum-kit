@@ -111,13 +111,11 @@ footer {
   height: 180px;
   margin: 12px;
   transition: transform 0.1s ease-in-out; /* Smooth transition on size change */
-
 }
 
 .drum.active {
   transform: scale(0.9);
   transition: all 0.1s ease-in-out; /* Smooth transition for animation */
-
 }
 
 .drum:hover {
@@ -138,6 +136,9 @@ footer {
     cursor: none;
     margin: 0;
     border: none;
+  }
+  .star {
+    display: none;
   }
   h1 {
     position: relative;
@@ -180,17 +181,25 @@ footer {
     height: 60px;
     width: 90vw;
     border-radius: 60px;
+    transition: transform 0.1s ease-in-out; /* Smooth transition on size change */
+  }
+  .drum.active {
+    transform: scale(0.9);
+    transition: all 0.1s ease-in-out; /* Smooth transition for animation */
   }
 }
 
 /* Extra small devices (phones, 600px and down) */
-@media (max-width: 550px) and (min-width: 365px) {
+@media (max-width: 650px) and (min-width: 364px) {
   body {
     display: flex;
     flex-direction: column;
     justify-content: center;
     cursor: none;
     margin: 0;
+  }
+  .star{
+    display: none;
   }
   h1 {
     position: relative;
@@ -221,12 +230,8 @@ footer {
   .drum-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Adjust the number of columns as needed */
-    /* grid-template-columns: repeat(
-      auto-fill,
-      minmax(150px, 1fr)
-    ); */
     gap: 10px;
-    width: 90vw; /* padding: 20px; */ /* margin: 0; */
+    width: 90vw;
     justify-content: space-between;
     justify-items: center;
   }
@@ -236,8 +241,12 @@ footer {
     border-radius: 20px;
     height: 130px;
     width: 100%;
+    transition: transform 0.1s ease-in-out; /* Smooth transition on size change */
   }
-
+  .drum.active {
+    transform: scale(0.9);
+    transition: all 0.1s ease-in-out; /* Smooth transition for animation */
+  }
   .l {
     background-image: url("./images/new/bass-drum.jpg");
     background-size: 360px;
