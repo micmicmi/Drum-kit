@@ -28,10 +28,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  /* height: 100vh; */
   background-image: url("./images/texture-dark.jpg");
   margin: 0;
-  overflow: hidden;
+  overflow:auto
 }
 
 h1 {
@@ -128,69 +128,9 @@ footer {
 }
 
 /* Media Querirs - extra exstra small devices*/
-@media (max-width: 363px) {
-  body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    cursor: none;
-    margin: 0;
-    border: none;
-  }
-  .star {
-    display: none;
-  }
-  h1 {
-    position: relative;
-    right: 1%;
-    font-size: 3rem; /* Adjust font size based on testing */
-    line-height: 1.1; /* Adjust line height for better readability */
-    color: #000000;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: rgb(255, 255, 255);
-    position: relative;
-    right: 1%;
-  }
-  span {
-    color: #000000;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: rgb(255, 255, 255);
-  }
-  .svg {
-    width: 80px;
-    position: relative;
-    top: 3px;
-    vertical-align: bottom;
-  }
-  .svg:hover {
-    transform: scale(1.05);
-  }
-
-  .drum-container {
-  display: grid;
-  grid-template-columns: 1fr; /* align-items: center; */
-  gap: 12px;
-  justify-items: center;
-  }
-
-  .drum {
-    background: #ff00aa;
-    border: none;
-    font-size: 2rem;
-    border-radius: 20px;
-    height: 60px;
-    width: 90vw;
-    border-radius: 60px;
-    transition: transform 0.1s ease-in-out; /* Smooth transition on size change */
-  }
-  .drum.active {
-    transform: scale(0.9);
-    transition: all 0.1s ease-in-out; /* Smooth transition for animation */
-  }
-}
 
 /* Extra small devices (phones, 600px and down) */
-@media (max-width: 650px) and (min-width: 364px) {
+@media (max-width: 650px) and (min-width: 200px) {
   body {
     display: flex;
     flex-direction: column;
