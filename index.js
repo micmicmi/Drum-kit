@@ -1,3 +1,16 @@
+const starContainer = document.querySelector('.star-container');
+const maxStars = 0;
+
+document.addEventListener('mousemove', (event) => {
+  const star = document.createElement('div');
+  star.classList.add('star');
+
+  star.style.left = event.clientX + 'px';
+  star.style.top = event.clientY + 'px';   
+
+  starContainer.appendChild(star);
+});
+
 
 const audioMap = {
   w: "sounds/tom-1.mp3",
