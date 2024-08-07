@@ -12,8 +12,9 @@ caret-color: transparent;
   border-radius: 50%;
   opacity: 0.5; /* Initial opacity */
   animation: fadeOut 1s ease-in-out forwards;
-  pointer-events: none;
+  pointer-events: none; 
 }
+
 @keyframes fadeOut {
   from {
     opacity: 1;
@@ -21,7 +22,7 @@ caret-color: transparent;
   to {
     opacity: 0;
   }
-}
+} 
 
 body {
   display: flex;
@@ -109,10 +110,14 @@ footer {
   width: 180px;
   height: 180px;
   margin: 12px;
+  transition: transform 0.1s ease-in-out; /* Smooth transition on size change */
+
 }
 
 .drum.active {
   transform: scale(0.9);
+  transition: all 0.1s ease-in-out; /* Smooth transition for animation */
+
 }
 
 .drum:hover {
